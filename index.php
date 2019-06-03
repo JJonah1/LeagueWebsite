@@ -1,15 +1,11 @@
-<?php 
-include 'Dataprovider\apiCalls.php';
-$name = "JJonah";
-$apiCalls = new apiCalls();
-?>
-
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>League Website</title>
-    </head>
-    <body>
-        <?php echo $apiCalls->getSummonderDataByName($name)['id'] ?>
-    </body>
-</html>
+<?php
+include('Classes/controller.php');  
+include('Dataprovider/apiCalls.php');  
+include('Templates/homepage.php');  
+  
+// $_GET und $_POST zusammenfasen  
+$request = array_merge($_GET, $_POST);  
+// Controller erstellen  
+$controller = new Controller($request);  
+// Inhalt der Webanwendung ausgeben.  
+echo $controller->display(); 
