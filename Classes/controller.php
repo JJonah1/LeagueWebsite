@@ -24,7 +24,7 @@
             $view = new View();  
             switch($this->template){  
                 default:   
-                    $view->setTemplate('homepage');   
+                    $view->setTemplate('summonerProfil');   
             }  
             return $view->loadTemplate();  
         }  

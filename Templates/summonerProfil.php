@@ -11,7 +11,7 @@ $summonderData = $apiCalls->getSummonderDataByName($summonerName, $region);
     </head>
     <body>
         <?php
-        echo $summonderData['name'];
+        echo $summonderData['id'];
         ?>
     </body>
 </html>

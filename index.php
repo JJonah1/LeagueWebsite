@@ -1,7 +1,7 @@
 <?php
 include('Classes/controller.php');  
 include('Dataprovider/apiCalls.php');  
-include('Templates/homepage.php');  
+include('Classes/view.php');  
   
 // $_GET und $_POST zusammenfasen  
 $request = array_merge($_GET, $_POST);  
