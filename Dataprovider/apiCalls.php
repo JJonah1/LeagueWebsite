@@ -2,7 +2,7 @@
 
 class apiCalls {
     
-    public $apiKey = 'RGAPI-b4465b5a-9277-4b2b-bceb-a36b148e8847';
+    public $apiKey = 'RGAPI-497da90d-2acc-45be-8724-d15cf8f8f4ab';
             
     public function getSummonderDataByName($summonerName, $region) {
         $apiUrl = 'https://'.$region.'.api.riotgames.com/lol/summoner/v4/summoners/by-name/'.$summonerName.'?api_key='.$this->apiKey;

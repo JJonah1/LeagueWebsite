@@ -1,0 +1,4 @@
+
+function LoadSummonerTemplate(){
+        alert("test");
+}

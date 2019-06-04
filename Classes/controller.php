@@ -3,7 +3,8 @@
     class Controller{  
       
         private $request = null;  
-        private $template = '';  
+        private $template = '';
+        private $summonerData;
       
         /** 
          * Konstruktor, erstellet den Controller. 
@@ -14,7 +15,7 @@
             $this->request = $request;  
             $this->template = !empty($request['view']) ? $request['view'] : 'default';  
         }  
-      
+        
         /** 
          * Methode zum anzeigen des Contents. 
          * 
@@ -22,9 +23,13 @@
          */  
         public function display(){  
             $view = new View();  
-            switch($this->template){  
+            switch($this->template){
+                case 'searchProfile':
+                    $this->summonerData = $apiCalls->getSummonderDataByName($summonerName, $region);
+                    $view->setTemplate('summonerProfil');
+                    break;
                 default:   
-                    $view->setTemplate('summonerProfil');   
+                    $view->setTemplate('homepage');   
             }  
             return $view->loadTemplate();  
         }  

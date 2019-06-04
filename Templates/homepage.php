@@ -10,8 +10,7 @@ $summonderData = $apiCalls->getSummonderDataByName($summonerName, $region);
         <title></title>
     </head>
     <body>
-        <?php
-        echo $summonderData['name'];
-        ?>
+        <input type="text" style="width: 50px" id="summonerName">
+        <button id="searchSummonerName" onclick="LoadSummonerTemplate()">Search</button>
     </body>
 </html>
